@@ -1,0 +1,38 @@
+
+.sidebar {
+  width: 210px;
+  height: 100vh;
+  background-color: #fff;
+  color: black;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  
+}
+
+li{
+  margin: 25px 20px;
+}
+a{
+  color: grey;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #FE0000;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+/* Add more styling as needed */
