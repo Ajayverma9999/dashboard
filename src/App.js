@@ -5,6 +5,7 @@ import Contect from './components/Contact.jsx';
 import Grow from './components/Grow'
 import { Route, Routes } from 'react-router-dom';
 import Dashboard from './components/Dashboard.jsx';
+import Blog from './components/Blog.jsx';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/home" element={<Dashboard/>} />
         <Route path="/Contact" element={<Contect/>} />
         <Route path="/GrowWithUS" element={<Grow/>} />
+        <Route path="/blog" element={<Blog/>} />
       </Routes>
     </div>);
 }

@@ -8,37 +8,41 @@
   width: 100%;
 }
 
-#heading{
+#heading {
   display: flex;
   align-items: center;
   justify-content: center;
-  color:#54595F ;
-  font-family: 'Montserrat', sans-serif;
-   margin: 20px 30px 50px;
+  color: #54595f;
+  font-family: "Montserrat", sans-serif;
+  margin: 20px 30px 50px;
 }
 
-#main{
+#main1 {
   margin: 10px 120px;
 }
 
-
-table{
+table {
   width: 100%;
   border-collapse: collapse;
 }
 
-.tableRow {
+.tableRow1 {
   font-size: 16px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   /* margin: 30px 30px; */
-  font-family: 'Poppins', sans-serif;
-  color:#54595F ;
+  font-family: "Poppins", sans-serif;
+  color: #54595f;
   border: 1px solid gray;
-
 }
 
-th{
+th {
   border: 1px solid gray;
-  padding: 12px ;
+  padding: 12px;
+}
+td {
+  border: 1px solid gray;
+  padding: 12px;
+  text-align: center;
+  overflow-x: auto;
 }
