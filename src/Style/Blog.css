@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.grow {
+  width: 100%;
+}
+
+#heading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:#54595F ;
+  font-family: 'Montserrat', sans-serif;
+   margin: 20px 30px 50px;
+}
+
+#main{
+  margin: 10px 120px;
+}
+
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableRow2 {
+  font-size: 16px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  /* margin: 30px 30px; */
+  font-family: 'Poppins', sans-serif;
+  color:#54595F ;
+  border: 1px solid gray;
+
+}
+
+th{
+  border: 1px solid gray;
+  padding: 12px ;
+}
