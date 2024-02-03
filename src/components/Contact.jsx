@@ -8,12 +8,13 @@ const Contact = () => {
       <div id='main'>
         <table>
           <tr className='tableRow'>
-            <th> Email Address</th>
-            <th> Full Name</th>
-            <th> Contact number</th>
-            <th> Servics</th>
-            <th> Message</th>
+            <thead> Email Address</thead>
+            <thead> Full Name</thead>
+            <thead> Contact number</thead>
+            <thead> Servics</thead>
+            <thead> Message</thead>
           </tr>
+          
           </table>
       </div>
     </div>

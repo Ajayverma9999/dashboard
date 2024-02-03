@@ -7,9 +7,9 @@ const Grow = () => {
     <div className="grow">
       <h1 id='heading'>Grow with Us</h1>
 
-      <div id="main">
+      <div id="main1">
         <table>
-        <tr className='tableRow'>
+        <tr className='tableRow1'>
         <th>Name</th>
         <th>Email</th>
         <th>Conatct</th>

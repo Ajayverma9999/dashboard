@@ -15,16 +15,13 @@
   justify-content: center;
   color:#54595F ;
   font-family: 'Montserrat', sans-serif;
-
 }
 
-
-#main{
+#main {
   margin: 10px;
 }
 
-
-table{
+table {
   width: 100%;
   border-collapse: collapse;
 }
@@ -33,14 +30,28 @@ table{
   font-size: 16px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 2fr 1fr;
-  /* margin: 30px 30px; */
   font-family: 'Poppins', sans-serif;
   color:#54595F ;
   border: 1px solid gray;
-
 }
 
-th{
+th {
   border: 1px solid gray;
-  padding: 12px ;
+  padding: 12px;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .tableRow {
+    grid-template-columns: 1fr 1fr;
+    font-size: 14px;
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
+  .tableRow {
+    grid-template-columns: 1fr;
+    font-size: 12px;
+  }
 }
