@@ -13,18 +13,27 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <img src={logo} alt="" width={190} />
-      {auth ?
-        <ul>
+// <<<<<<< deepanshu
+      <ul>
+        <li><Link to='/home' >Dashboard</Link></li>
+        <li><Link to='/GrowWithUS' >Grow With US</Link></li>
+        <li> <Link to='/contact' >Contact</Link></li>
+        <li> <Link to='/blog' >Blog</Link></li>
+      </ul>
+// =======
+//       {auth ?
+//         <ul>
 
-          <li><Link to='/GrowWithUS' >Grow With US</Link></li>
-          <li> <Link to='/contact' >Contact</Link></li>
-          <li> <Link to='/Blog' >Blog</Link></li>
-        </ul>
-        : 
-        <ul>
-<li><Link to="/">Login</Link></li>
-        </ul>
-        }
+//           <li><Link to='/GrowWithUS' >Grow With US</Link></li>
+//           <li> <Link to='/contact' >Contact</Link></li>
+//           <li> <Link to='/Blog' >Blog</Link></li>
+//         </ul>
+//         : 
+//         <ul>
+// <li><Link to="/">Login</Link></li>
+//         </ul>
+//         }
+// >>>>>>> main
     </div>
   );
 };
