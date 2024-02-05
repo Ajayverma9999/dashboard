@@ -1,39 +1,44 @@
-
-import React, { useState } from 'react';
-import '../Style/Sidebar.css';
+import React from "react";
+import "../Style/Sidebar.css";
 import { Link } from "react-router-dom";
-import logo from "../Assets/logo.webp"
-import Login from './Login';
+import logo from "../Assets/logo.webp";
 
-
-const Sidebar = () => {
-
-  const [auth, setAuth] = useState(false)
-
+const Sidebar = ({ setLoggedIn }) => {
+  const logoutHandler = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    setLoggedIn(false);
+  };
   return (
     <div className="sidebar">
-      <img src={logo} alt="" width={190} />
-// <<<<<<< deepanshu
+      <Link to="/">
+        <img src={logo} alt="" width={190} />
+      </Link>
       <ul>
-        <li><Link to='/home' >Dashboard</Link></li>
-        <li><Link to='/GrowWithUS' >Grow With US</Link></li>
-        <li> <Link to='/contact' >Contact</Link></li>
-        <li> <Link to='/blog' >Blog</Link></li>
+        <li>
+          <Link to="/GrowWithUS">Grow With US</Link>
+        </li>
+        <li>
+          <Link to="/contact">Contact</Link>
+        </li>
+        <li>
+          <Link to="/blog">Blog</Link>
+        </li>
+        <li>
+          <button
+            style={{
+              cursor: "pointer",
+              fontSize: "16px",
+              backgroundColor: "white",
+              border: "none",
+              outline: "none",
+            }}
+            onClick={logoutHandler}
+          >
+            LogOut
+          </button>
+        </li>
       </ul>
-// =======
-//       {auth ?
-//         <ul>
-
-//           <li><Link to='/GrowWithUS' >Grow With US</Link></li>
-//           <li> <Link to='/contact' >Contact</Link></li>
-//           <li> <Link to='/Blog' >Blog</Link></li>
-//         </ul>
-//         : 
-//         <ul>
-// <li><Link to="/">Login</Link></li>
-//         </ul>
-//         }
-// >>>>>>> main
     </div>
   );
 };

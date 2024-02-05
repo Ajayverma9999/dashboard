@@ -6,19 +6,26 @@
 
 .contact {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #heading {
-  margin: 20px 30px 50px;
+  margin: 20px 30px 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color:#54595F ;
-  font-family: 'Montserrat', sans-serif;
+  color: #54595f;
+  font-family: "Montserrat", sans-serif;
 }
 
 #main {
   margin: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
 }
 
 table {
@@ -32,8 +39,8 @@ table {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 2fr 1fr;
   /* margin: 30px 30px; */
-  font-family: 'Poppins', sans-serif;
-  color:#54595F ;
+  font-family: "Poppins", sans-serif;
+  color: #54595f;
   border: 1px solid gray;
 }
 
@@ -42,14 +49,12 @@ th {
   padding: 12px;
 }
 
-
 @media only screen and (max-width: 768px) {
   .tableRow {
     grid-template-columns: 1fr 1fr;
     font-size: 14px;
   }
 }
-
 
 @media only screen and (max-width: 480px) {
   .tableRow {

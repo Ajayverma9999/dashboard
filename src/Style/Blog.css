@@ -8,21 +8,20 @@
   width: 100%;
 }
 
-#heading{
+#heading {
   display: flex;
   align-items: center;
   justify-content: center;
-  color:#54595F ;
-  font-family: 'Montserrat', sans-serif;
-   margin: 20px 30px 50px;
+  color: #54595f;
+  font-family: "Montserrat", sans-serif;
+  margin: 20px 30px 50px;
 }
 
-#main{
+#main {
   margin: 10px 120px;
 }
 
-
-table{
+table {
   width: 100%;
   border-collapse: collapse;
 }
@@ -32,13 +31,21 @@ table{
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   /* margin: 30px 30px; */
-  font-family: 'Poppins', sans-serif;
-  color:#54595F ;
+  font-family: "Poppins", sans-serif;
+  color: #54595f;
   border: 1px solid gray;
-
 }
 
-th{
+th {
   border: 1px solid gray;
-  padding: 12px ;
+  padding: 12px;
+}
+.blog-thumbnail {
+  width: 100%;
+  height: 221px;
+}
+.overlay{
+  height: 100%;
+  width: 100%;
+  background-color: black;
 }

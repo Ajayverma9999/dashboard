@@ -1,43 +1,26 @@
-import React, { useState } from 'react';
-import Sidebar from './components/Sidebar';
-import Contect from './components/Contact.jsx';
-import Grow from './components/Grow'
-import { Route, Routes } from 'react-router-dom';
-import Dashboard from './components/Dashboard.jsx';
-import Blog from './components/Blog.jsx';
-import Login from './components/Login.jsx';
-
+import React, { useState } from "react";
+import Login from "./Pages/Login.jsx";
+import HomePage from "./Pages/HomePage.jsx";
+import { useEffect } from "react";
 
 function Home() {
+  const [isLoggedIn, setLoggedIn] = useState(false);
 
+  useEffect(() => {
+    localStorage.getItem("token") ? setLoggedIn(true) : setLoggedIn(false);
+  }, []);
 
   return (
-
-
-    <div className="Home-container">
-      <Sidebar />
-
-      <Routes>
-// <<<<<<< deepanshu
-        <Route path="/home" element={<Dashboard/>} />
-        <Route path="/Contact" element={<Contect/>} />
-        <Route path="/GrowWithUS" element={<Grow/>} />
-        <Route path="/blog" element={<Blog/>} />
-// =======
-//           <Route path="/" element={<Login/>} />
-//           {/* <Route path="/home" element={<Sidebar/>} /> */}
-//           <Route path="/Contact" element={<Contect/>} />
-//           <Route path="/GrowWithUS" element={<Grow/>} />
-//           <Route path="/blog" element={<Blog/>} />
-// >>>>>>> main
-      </Routes>
-    </div>
-
+    <>
+      <div>
+        {isLoggedIn ? (
+          <HomePage setLoggedIn={setLoggedIn} />
+        ) : (
+          <Login setLoggedIn={setLoggedIn} />
+        )}
+      </div>
+    </>
   );
-
 }
 
-
 export default Home;
-
-
