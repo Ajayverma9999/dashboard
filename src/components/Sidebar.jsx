@@ -11,10 +11,12 @@ const Sidebar = ({ setLoggedIn }) => {
   };
   return (
     <div className="sidebar">
+      <div>
       <Link to="/">
         <img src={logo} alt="" width={190} />
       </Link>
-      <ul>
+      </div>
+      <ul className="sidebar_menu">
         <li>
           <Link to="/GrowWithUS">Grow With US</Link>
         </li>

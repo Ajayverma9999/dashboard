@@ -73,7 +73,10 @@ td {
 
 @media only screen and (max-width: 480px) {
   .tableRow1 {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     font-size: 12px;
+  }
+  #main1 {
+    margin: 10px 20px;
   }
 }

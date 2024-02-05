@@ -47,6 +47,16 @@ a:hover {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 1000px) {
+  .sidebar {
+    display: none;
+    /* display: flex; */
+  }
+  .main-container {
+    margin: 0;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .sidebar {
     width: 150px;
