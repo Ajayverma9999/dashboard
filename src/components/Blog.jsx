@@ -6,7 +6,7 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import upload_area from "../Assets/upload-area.svg";
 import '../Style/Blog.css'
-const Blog = () => {
+const Blog = ({setLoggedIn}) => {
   const editor = useRef(null);
   const [content, setContent] = useState("");
   const [heading, setHeading] = useState("");

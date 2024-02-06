@@ -74,14 +74,14 @@
 
 // export default Comments;
 
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import axios from "axios";
 import "../Style/comments.css"; // Make sure to create this CSS file
 
 const Comments = ({ setLoggedIn }) => {
   const [blogs, setBlogs] = useState([]);
 
-  const getBlogs = async () => {
+  const getBlogs = useCallback(async () => {
     try {
       const response = await axios.get(
         `http://localhost:8080/blog/searchByAuthorId`,
@@ -105,11 +105,11 @@ const Comments = ({ setLoggedIn }) => {
         setLoggedIn(false);
       }
     }
-  };
+  }, [setLoggedIn]);
 
   useEffect(() => {
     getBlogs();
-  }, []);
+  }, [getBlogs]);
 
   const handleApprove = async (blogId, commentId) => {
     try {

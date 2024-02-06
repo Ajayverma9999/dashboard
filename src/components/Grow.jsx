@@ -39,7 +39,7 @@ const Grow = ({ setLoggedIn }) => {
     };
 
     fetchData();
-  }, []);
+  }, [setLoggedIn]);
 
   const onExport = () => {
     const fileName = "download";

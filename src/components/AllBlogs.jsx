@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../Style/AllBlogs.css";
 
-const AllBlogs = () => {
+const AllBlogs = ({ setLoggedIn }) => {
   const [blogs, setBlogs] = useState([]);
 
-  const getBlogs = async ({setLoggedIn}) => {
+  const getBlogs = async () => {
     try {
       const response = await axios.get(
         "http://localhost:8080/blog/searchByAuthorId",
@@ -24,7 +24,8 @@ const AllBlogs = () => {
 
   useEffect(() => {
     getBlogs();
-  }, []);
+   // eslint-disable-next-line
+  },[]);
 
   const deleteHandler = async (id) => {
     const userConfirmed = window.confirm("Are you sure you want to delete?");

@@ -28,7 +28,7 @@ const Contact = ({ setLoggedIn }) => {
     };
 
     fetchData();
-  }, []);
+  }, [setLoggedIn]);
 
   const onExport = () => {
     const fileName = "download";
