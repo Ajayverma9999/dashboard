@@ -3,7 +3,7 @@ import "../Style/grow.css";
 import axios from "axios";
 import exportFromJSON from "export-from-json";
 
-const Grow = () => {
+const Grow = ({ setLoggedIn }) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -21,7 +21,16 @@ const Grow = () => {
         );
         setData(res.data.data);
       } catch (error) {
-        alert(`${error.response.data} \n Logout and Try Again`)
+        if (error.response.status === 403) {
+          setLoggedIn(false);
+        }
+        if (error.response) {
+          alert(`${error.response.data} \n Logout and Try Again`);
+        } else if (error.request) {
+          alert("No response received from the server. Logout and try again.");
+        } else {
+          alert("Error setting up the request. Logout and try again.");
+        }
         setError("Error fetching data. Please logout and try again.");
         console.log(error);
       } finally {

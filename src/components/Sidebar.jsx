@@ -22,7 +22,13 @@ const Sidebar = ({ setLoggedIn }) => {
           <Link to="/contact">Contact</Link>
         </li>
         <li>
-          <Link to="/blog">Blog</Link>
+          <Link to="/blog">Create Blog</Link>
+        </li>
+        <li>
+          <Link to="/blogs">Blogs</Link>
+        </li>
+        <li>
+          <Link to="/comments">Comments</Link>
         </li>
         <li>
           <button

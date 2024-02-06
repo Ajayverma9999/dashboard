@@ -3,7 +3,7 @@ import "../Style/Contact.css";
 import axios from "axios";
 import exportFromJSON from "export-from-json";
 
-const Contact = () => {
+const Contact = ({ setLoggedIn }) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -16,7 +16,10 @@ const Contact = () => {
         });
         setData(res.data.data);
       } catch (error) {
-        alert(`${error.response.data} \n Logout and Try Again`);
+        if (error.response.status === 403) {
+          setLoggedIn(false);
+          alert(`Session Expired! Login Again!`);
+        }
         setError("Error fetching data. Please logout and try again.");
         console.error(error);
       } finally {

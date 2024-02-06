@@ -1,0 +1,11 @@
+#allblogs{
+    margin-left: 20%;
+    width: 80%;
+    padding: 20px;
+}
+
+.blogsTable{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 3fr 3fr;
+}

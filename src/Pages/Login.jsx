@@ -27,7 +27,11 @@ const Login = ({ setLoggedIn }) => {
         }
       } catch (error) {
         console.log(error);
-        alert(error.response.data.message);
+        if (error.response && error.response.data) {
+          alert(error.response.data.message);
+        } else {
+          alert(error.message);
+        }
       }
     }
   };
